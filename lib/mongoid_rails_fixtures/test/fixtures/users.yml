@@ -1,0 +1,5 @@
+user_1:
+    username: bob
+    is_active: true
+    roles:
+      - user
