@@ -1,35 +1,41 @@
 == SYNOPSIS
-* Data migrations for Mongoid.
+* A case of the fixtures for the mongoid
 
-== MIGRATE WHEN ...
-* You need to rearrange or split data
-* You have model instances which you leverage as schema data
+== WHY?
+* Fixtures can be kinda nice for classic rails workflow
+* Some of us don't like factories
+* Factories can't test db server side code, e.g. Mongodb server.js
 
 == REQUIREMENTS
-* rails 3.0.0.beta3 ( should be cake updating for rails 3 final )
+* rails >= 3.0.0.beta3 ( should be cake updating for rails 3 final )
 * mongoid
-
-== REQUIRES
-* mongoid_rails_migrations
-* rails >= 3
 
 == INSTALL
 * gem install mongoid_rails_fixtures
 * In your Gemfile, include:
   gem "mongoid_rails_fixtures", ">=0.0.1" # or current version
+  
+== OPTIONS
+  to use, set these attributes after the Bunlder.require in your application.rb
 * to migrate before test runs, optionally include
   +typewriter+Mongoid.configure.migrate_before_tests = true+typewriter+
+* to stop the deletion of existing fixtures before create (a rails default), set
+  +typewriter+Mongoid.configure.delete_existing_fixtures_before_create = false+typewriter+
 
 == FEATURES AND HOW TO USE
 * you can simply create your own fixture files
-* or use a generator:
-  * rails generate mongoid:fixture your_fixture
+* I've been thinking about creating a generator but it seems to be overkill to automate the process
+* place your fixtures as pluralized models either in .yml or .csv (e.g. users.yml) in your rails/test/fixtures directory
 * execute with a standard call to
   +typewriter+rake test:units+typewriter+
 
 == NOTES
-* original active_record/fixtures.rb is unchanged for association detection (so that likely doesn't work)
+* Original active_record/fixtures.rb is unchanged for association detection (so that likely doesn't work)
 * Only tested with ruby 1.9.1
+
+== TODO
+* make association detection functional in fixtures.rb
+*
 
 == CREDITS TO
   * rails

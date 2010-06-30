@@ -4,8 +4,6 @@ module MongoidRailsFixtures
   def self.dirname; File.dirname(__FILE__); end
 end
 
-puts "MongoidRailsFixtures.dirname = #{MongoidRailsFixtures.dirname}"
-
 require 'rubygems'
 # Set up gems listed in the Gemfile.
 if File.exist?("#{MongoidRailsFixtures.dirname}/../../Gemfile")
