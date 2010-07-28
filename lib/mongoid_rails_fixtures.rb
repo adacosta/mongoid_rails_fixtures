@@ -1,5 +1,4 @@
 # encoding: utf-8
-
 module MongoidRailsFixtures
   def self.dirname; File.dirname(__FILE__); end
 end
