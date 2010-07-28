@@ -4,7 +4,7 @@
 == WHY?
 * Fixtures can be kinda nice for classic rails workflow
 * Some of us don't like factories
-* Factories can't test db server side code, e.g. Mongodb server.js
+* Make real db calls
 
 == REQUIREMENTS
 * rails >= 3.0.0.rc
