@@ -7,8 +7,8 @@
 * Factories can't test db server side code, e.g. Mongodb server.js
 
 == REQUIREMENTS
-* rails >= 3.0.0.beta3 ( should be cake updating for rails 3 final )
-* mongoid
+* rails >= 3.0.0.rc
+* mongoid >= 2.0.0.beta.7
 
 == INSTALL
 * gem install mongoid_rails_fixtures
